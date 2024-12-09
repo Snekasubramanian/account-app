@@ -1,0 +1,50 @@
+stages:
+  - build
+  - deploy
+
+cache: {}
+
+build_app:
+  image: node:16.13.2
+  stage: build
+  tags:
+    - docker
+  before_script:
+    - yarn install --frozen-lockfile --check-files --non-interactive
+  script:
+    - yarn build:sit
+  after_script:
+    - echo $(date) >> "dist/static/buildTime.txt"
+  artifacts:
+    expire_in: 2 days
+    paths:
+      - dist
+  only:
+    refs:
+      - branches
+    variables:
+      - $CI_COMMIT_REF_PROTECTED == "true"
+
+.deploy:
+  stage: deploy
+  needs:
+    - build_app
+  cache: {}
+  before_script:
+    - whoami
+  script:
+    - 'sudo rm -rf $STATIC_DIR/*'
+    - echo "Deleted remote build"
+    - 'sudo cp -r dist/* $STATIC_DIR/'
+
+deploy:dev:
+  variables:
+    STATIC_DIR: /var/www/cams/aa-frontend
+  tags:
+    - webile-shell
+  stage: deploy
+  extends:
+    - .deploy
+  only:
+    refs:
+      - main

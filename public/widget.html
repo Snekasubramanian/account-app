@@ -1,0 +1,75 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    .widget-input::placeholder {
+      color: #8692a6;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/core-js-bundle@3.22.8/minified.js"></script>
+</head>
+<div id="widget-container">
+  <form onsubmit="event.preventDefault();WidgetSubmit();">
+    <input type="hidden" name="WidgetID" value="1234-5678-12345678" />
+    <input type="hidden" name="UsecaseID" value="4578" />
+    <input type="hidden" name="FICode" value="1234" />
+    <input type="hidden" name="WidgetName" value="DefaultWidget" />
+
+    <h1 id="status-message" style="display: none; text-align: center">
+      Status message comes here
+    </h1>
+
+    <div
+      style="display: flex; flex-direction: column; align-items: center"
+      id="mobile-number-form"
+    >
+      <div>
+        <p id="header-text" style="color: #80807c; text-align: left; font-family: Arial">
+          Mobile No.
+        </p>
+        <input
+          type="text"
+          id="FIU-widget-input-id"
+          name="MobileNumber"
+          placeholder="Enter your Mobile no. here"
+          class="widget-input"
+          style="
+            background-color: #ffffff;
+            width: 240px;
+            border-color: #000000;
+            border-width: 1px;
+            padding: 10px 15px;
+            color: #8692a6;
+            border-color: #000000;
+            margin-bottom: 40px;
+            border-color: #8692a6;
+            border-radius: 4px;
+            font-weight: bold;
+          "
+          value=""
+          required
+        />
+      </div>
+      <input
+        type="submit"
+        id="FIU-widget-submit"
+        value="Submit"
+        style="
+          color: #ffffff;
+          background-color: #000abb;
+          border-color: #000000;
+          border-width: 1px;
+          border-style: solid;
+          width: 210px;
+          line-height: 1px;
+          height: 40px;
+          border-radius: 4px;
+        "
+      />
+      <p style="font-size: 14; margin-top: 20px; color: #1f4173; font-family: Arial">
+        Powered by CAMS
+      </p>
+    </div>
+  </form>
+  <script src="./widget.js?t=12345678"></script>
+</div>

@@ -1,0 +1,2 @@
+export const READY_TO_SUBMIT = 'READY_TO_SUBMIT';
+export const SUBMITTING = 'SUBMITTING';

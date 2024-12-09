@@ -1,0 +1,19 @@
+{
+  "lst": [
+    { "fipid": "AUBank-FIP", "fipname": "AUBank" },
+    { "fipid": "AXIS001", "fipname": "Axis Bank" },
+    { "fipid": "bajaj-finserv-fip", "fipname": "BAJAJ FINSERV" },
+    { "fipid": "FDRLFIPPROD", "fipname": "FEDERAL BANK" },
+    { "fipid": "HDFC-FIP", "fipname": "HDFC Bank" },
+    { "fipid": "ICICI-FIP", "fipname": "ICICI Bank" },
+    { "fipid": "IDFCFirstBank-FIP", "fipname": "IDFC FIRST BANK" },
+    { "fipid": "fiplive@indusind", "fipname": "IndusInd Bank Ltd." },
+    { "fipid": "KarurVysyaBank-FIP", "fipname": "Karur Vysya Bank" },
+    { "fipid": "KotakMahindraBank-FIP", "fipname": "Kotak Mahindra Bank" },
+    { "fipid": "SBI-FIP", "fipname": "State Bank of India" }
+  ],
+  "uuid": "a6d91f69-137a-455a-9f97-313aa4e984c5",
+  "resulT_CODE": "200",
+  "message": null,
+  "sessioN_ID": "42724be2-168e-4d11-94c9-233240b06178"
+}

@@ -1,0 +1,19 @@
+{
+    "name": "JAR",
+    "short_name": "JAR",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "",
+    "description": "JAR",
+    "icons": [
+      {
+        "src": "images/warning.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "images/WhatsApp-icon.svg",
+        "type": "image/svg"
+      }
+    ]
+  }
+  
